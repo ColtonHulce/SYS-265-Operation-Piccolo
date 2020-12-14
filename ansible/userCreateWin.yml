@@ -1,0 +1,15 @@
+---
+- name: create new user
+  hosts: windomain
+  tasks:
+  - name: Create User
+    community.windows.win_domain_user:
+      name: newuser
+      firstname: new
+      surname: user
+      password: Ch@mpl@1n!20
+      state: present
+      enabled: yes
+      groups:
+        - Domain Admins
+      

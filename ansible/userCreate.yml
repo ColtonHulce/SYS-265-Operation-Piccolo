@@ -1,0 +1,11 @@
+---
+- name: create new user
+  hosts: ubuntu
+  become: yes
+  tasks:
+  - name: Create User
+    user:    
+      name: new
+      shell: /bin/bash
+      groups: sudo
+      password: $6$HE5HY/FZ6jmIm$RUON1jX994hV9sAsJbYObzzeZEBLTohsvOIctj.CqKwn4AOM5446YnePwVNkWZZQDZDK1/foldx45XjIinXDp1
